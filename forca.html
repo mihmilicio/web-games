@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/forca.css" />
+    <title>Web Games - Forca</title>
+  </head>
+  <body>
+    <my-menu></my-menu>
+    <main>
+      <h1>Jogo da Forca</h1>
+      <div>
+        Dificuldade: &nbsp;&nbsp;
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="facil"
+            name="dificuldade"
+            class="custom-control-input"
+            value="facil"
+          />
+          <label class="custom-control-label" for="facil">Fácil</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="medio"
+            name="dificuldade"
+            class="custom-control-input"
+            value="medio"
+          />
+          <label class="custom-control-label" for="medio">Médio</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="dificil"
+            name="dificuldade"
+            class="custom-control-input"
+            value="dificil"
+          />
+          <label class="custom-control-label" for="dificil">Difícil</label>
+        </div>
+      </div>
+      <div class="d-none mt-3" id="game">
+        <div class="row">
+          <div class="col-auto">
+            <canvas id="hangman" width="180" height="250"></canvas>
+            <table
+              class="table table-bordered table-palavra"
+              style="width: auto;"
+            >
+              <tr id="tr-palavra"></tr>
+            </table>
+          </div>
+          <div class="col">
+            <form class="form-inline" id="guess-form">
+              <div class="form-group mb-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guess"
+                  required
+                  maxlength="1"
+                  placeholder="Seu palpite"
+                  pattern="[a-zA-Z]+"
+                  title="Apenas 1 letra (sem caracteres especiais)"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary mb-2 ml-2">
+                Tentar
+              </button>
+            </form>
+
+            <div class="table-responsive mt-5">
+              <table
+                class="table table-bordered table-tentativas"
+                style="width: auto;"
+              >
+                <thead>
+                  <tr>
+                    <th colspan="6">Tentativas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-letter="a">A</td>
+                    <td data-letter="b">B</td>
+                    <td data-letter="c">C</td>
+                    <td data-letter="d">D</td>
+                    <td data-letter="e">E</td>
+                    <td data-letter="f">F</td>
+                  </tr>
+                  <tr>
+                    <td data-letter="g">G</td>
+                    <td data-letter="h">H</td>
+                    <td data-letter="i">I</td>
+                    <td data-letter="j">J</td>
+                    <td data-letter="k">K</td>
+                    <td data-letter="l">L</td>
+                  </tr>
+                  <tr>
+                    <td data-letter="m">M</td>
+                    <td data-letter="n">N</td>
+                    <td data-letter="o">O</td>
+                    <td data-letter="p">P</td>
+                    <td data-letter="q">Q</td>
+                    <td data-letter="r">R</td>
+                  </tr>
+                  <tr>
+                    <td data-letter="s">S</td>
+                    <td data-letter="t">T</td>
+                    <td data-letter="u">U</td>
+                    <td data-letter="v">V</td>
+                    <td data-letter="w">W</td>
+                    <td data-letter="x">X</td>
+                  </tr>
+                  <tr>
+                    <td data-letter="y">Y</td>
+                    <td data-letter="z">Z</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <my-footer></my-footer>
+  </body>
+  <script type="module" src="components/index.js"></script>
+  <script src="script/forca.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+</html>
