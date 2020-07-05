@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/velha.css" />
+    <title>Web Games - Jogo da velha</title>
+  </head>
+  
+  <body>
+    <my-menu page="velha"></my-menu>
+    <main>
+      <h1>Jogo da Velha</h1>
+      <div>
+        Modo de jogo: &nbsp;&nbsp;
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="2players"
+            name="modoJogo"
+            class="custom-control-input"
+            value="2players"
+          />
+          <label class="custom-control-label" for="2players">player x player</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input
+            type="radio"
+            id="1player"
+            name="modoJogo"
+            class="custom-control-input"
+            value="1player"
+          />
+          <label class="custom-control-label" for="1player">single player</label>
+        </div>
+      </div>
+
+      <div class="d-none" id="game">
+        <div id="mostrador">
+            <p style="float: left; margin-right: 10px;">Vez do Jogador:</p>
+            <img src="" border="0" height="15">
+            <!-- <h1>x</h1> -->
+        </div>
+        
+        <div class="tabuleiro">
+            <div id="a1" class="space" round=""></div>
+            <div id="a2" class="space" round=""></div>
+            <div id="a3" class="space" round=""></div>
+
+            <div id="b1" class="space" round=""></div>
+            <div id="b2" class="space" round=""></div>
+            <div id="b3" class="space" round=""></div>
+
+            <div id="c1" class="space" round=""></div>
+            <div id="c2" class="space" round=""></div>
+            <div id="c3" class="space" round=""></div>
+        </div>
+      </div>
+    </main>
+
+    <my-footer></my-footer>
+  </body>
+  <script type="module" src="components/index.js"></script>
+  <script src="script/velha.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+</html>
