@@ -1,0 +1,53 @@
+#mostrador{
+  margin: 20px;
+  margin-top: 40px;
+  height: 80px;
+}
+
+/* #mostrador h1{
+  padding: none;
+} */
+
+.space{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #212529;
+  float: left;
+  text-align: center;
+  padding: 15px 14px 12px 15px;
+}
+
+.tabuleiro{
+  width: 252px;
+  height: 252px;
+  margin: 20px;
+}
+
+#a1 {
+  border-top: 0;
+  border-left: 0;
+}
+#a2{
+  border-top: 0;
+}
+#a3{
+  border-top: 0;
+  border-right: 0;
+}
+#b1{
+  border-left: 0;
+}
+#b3{
+  border-right: 0;
+}
+#c1{
+  border-left: 0;
+  border-bottom: 0;
+}
+#c2{
+  border-bottom: 0;
+}
+#c3{
+  border-bottom: 0;
+  border-right: 0;
+}
